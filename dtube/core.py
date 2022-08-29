@@ -5,6 +5,7 @@ __all__ = ['find_in_vids', 'search_in_vids']
 
 # %% ../00_core.ipynb 3
 from pytube import YouTube, Channel
+from fastcore.script import call_parse
 
 # %% ../00_core.ipynb 5
 def find_in_vids(o:dict,   # YT videos, dict title:description
@@ -14,6 +15,7 @@ def find_in_vids(o:dict,   # YT videos, dict title:description
     return {k:l for (k,v) in r.items() for l in v.split('\n') if d in l.lower()} 
 
 # %% ../00_core.ipynb 9
+@call_parse
 def search_in_vids(yt_name:str,   # YT user name
                    t:str,         # search in title 
                    d:str,         # search in description
