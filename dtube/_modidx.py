@@ -5,4 +5,5 @@ d = { 'settings': { 'branch': 'master',
                 'doc_host': 'https://LVG77.github.io',
                 'git_url': 'https://github.com/LVG77/dtube',
                 'lib_path': 'dtube'},
-  'syms': {'dtube.core': {'dtube.core.foo': ('core.html#foo', 'dtube/core.py')}}}
+  'syms': { 'dtube.core': { 'dtube.core.find_in_vids': ('core.html#find_in_vids', 'dtube/core.py'),
+                            'dtube.core.search_in_vids': ('core.html#search_in_vids', 'dtube/core.py')}}}
