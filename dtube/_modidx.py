@@ -6,4 +6,5 @@ d = { 'settings': { 'branch': 'master',
                 'git_url': 'https://github.com/LVG77/dtube',
                 'lib_path': 'dtube'},
   'syms': { 'dtube.core': { 'dtube.core.find_in_vids': ('core.html#find_in_vids', 'dtube/core.py'),
+                            'dtube.core.get_num_vids': ('core.html#get_num_vids', 'dtube/core.py'),
                             'dtube.core.search_in_vids': ('core.html#search_in_vids', 'dtube/core.py')}}}
