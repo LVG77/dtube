@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "dtube",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "dtube",
+    "section": "Install",
+    "text": "Install\npip install dtube"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "dtube",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfind_in_vids\n\n find_in_vids (o:dict, t:str, d:str)\n\n\n\n\n\nType\nDetails\n\n\n\n\no\ndict\nYT videos, dict title:description\n\n\nt\nstr\ntext to search in title\n\n\nd\nstr\ntext to search in description\n\n\n\n\nvid =  vids[0]\nvid\n\n<pytube.__main__.YouTube object: videoId=nNQg3BYu228>\n\n\n\nr = find_in_vids(vid_info, 'Live coding', 'git')\nr\n\n{'Live coding 11': '20:00 - Using .gitconfig',\n 'Live coding 15': '1:23:36 - running tests in fastai and creating github issues',\n 'Live coding 6': '42:30 - Adding git config file to persistent storage',\n 'Live coding 2': '54:26 Committing and pushing to git',\n 'Live coding 10': '14:00 - Github Gist',\n 'Live coding 3': '1:16:35 Copying SSH keys to Paperspace to communicate with github'}\n\n\n\nassert r['Live coding 11'] == '20:00 - Using .gitconfig'\nassert r['Live coding 6'] == '42:30 - Adding git config file to persistent storage'\n\n\nsource\n\n\nsearch_in_vids\n\n search_in_vids (yt_name:str, t:str, d:str, n_vid:int=10)\n\nSearch by keyword in YouTube video descriptions\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nyt_name\nstr\n\nYT user name\n\n\nt\nstr\n\nsearch in title\n\n\nd\nstr\n\nsearch in description\n\n\nn_vid\nint\n10\nnumber of videos to look into\n\n\n\n\nhits = search_in_vids('howardjeremyp', 'Live coding', 'vim')\nassert hits['Live coding 9'] == '06:30 - Navigating around files in vim'\n\n\nsource\n\n\nget_num_vids\n\n get_num_vids (yt_name:str, n_vid:int=10)\n\nGet the number of views for the last n_vid for user yt_name\n\n\n\n\nType\nDefault\nDetails\n\n\n\n\nyt_name\nstr\n\nYT user id\n\n\nn_vid\nint\n10\nnumber of vids to look into\n\n\n\n\nlatest_10_vids = get_num_vids('howardjeremyp')\ntest_eq(len(latest_10_vids.items()), 10)"
+  }
+]
